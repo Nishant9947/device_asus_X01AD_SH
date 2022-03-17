@@ -112,7 +112,7 @@ TW_EXCLUDE_TWRPAPP := true
 TW_HAS_EDL_MODE := true
 TW_USE_TOOLBOX := true
 TW_SKIP_COMPATIBILITY_CHECK := true
-
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone3/temp
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
@@ -135,7 +135,7 @@ ALLOW_MISSING_DEPENDENCIES=true
 # Path of your SHRP Tree
 SHRP_PATH := device/asus/X01AD
 # Maintainer name *
-SHRP_MAINTAINER := SP-XD
+SHRP_MAINTAINER := YASH
 # Device codename *
 SHRP_DEVICE_CODE := X01AD
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
@@ -150,13 +150,10 @@ SHRP_DARK := true
 SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
-SHRP_FLASH := 0 
+SHRP_FLASH := 1 
 SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := /sys/class/leds/led:torch_1/brightness
-SHRP_FONP_2 := /sys/class/leds/led:torch_0/brightness
-SHRP_FONP_3 := /sys/class/leds/led:switch_1/brightness
 SHRP_FLASH_MAX_BRIGHTNESS := 200
 SHRP_EDL_MODE := 1
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
 INC_IN_REC_MAGISK := true
-SHRP_OFFICIAL := true
