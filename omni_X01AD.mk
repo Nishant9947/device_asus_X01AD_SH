@@ -15,10 +15,11 @@
 #
 
 # Inherit Target Product stuff
-$(call inherit-product, build/target/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -30,7 +31,7 @@ PRODUCT_PACKAGES += \
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X01AD
-PRODUCT_NAME := omni_X01AD
+PRODUCT_NAME := twrp_X01AD
 PRODUCT_BRAND := ASUS
 PRODUCT_MODEL := Zenfone Max M2
 PRODUCT_MANUFACTURER := ASUS
@@ -40,6 +41,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.rndis.func.name=rndis_bam \
     sys.usb.rmnet.func.name=rmnet_bam
 
-# Blacklist Properties
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
-    ro.product.device
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/asus/X01AD/recovery/root,recovery/root)
