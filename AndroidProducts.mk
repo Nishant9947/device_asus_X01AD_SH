@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_X01AD.mk
+	$(LOCAL_DIR)/twrp_X01AD.mk

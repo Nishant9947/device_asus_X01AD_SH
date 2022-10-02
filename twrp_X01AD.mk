@@ -18,7 +18,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += \
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X01AD
-PRODUCT_NAME := omni_X01AD
+PRODUCT_NAME := twrp_X01AD
 PRODUCT_BRAND := ASUS
 PRODUCT_MODEL := Zenfone Max M2
 PRODUCT_MANUFACTURER := ASUS
