@@ -33,6 +33,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 TARGET_USES_64_BIT_BINDER := true
+TARGET_SUPPORTS_64_BIT_APPS := false
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm632
@@ -141,7 +142,7 @@ PLATFORM_SECURITY_PATCH := 2029-10-01
 # Path of your SHRP Tree
 SHRP_PATH := device/asus/X01AD
 # Maintainer name *
-SHRP_MAINTAINER := YASH
+SHRP_MAINTAINER := Nishant
 # Device codename *
 SHRP_DEVICE_CODE := X01AD
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
